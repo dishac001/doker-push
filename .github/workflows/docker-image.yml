@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dishachaudhari/DOCKER-repo:latest
+      run: docker build . --file Dockerfile --tag dishachaudhari/docker-repo:latest
     - name: push docker image
-      run: docker login -u  dishachaudhari -p $ {{ secrets.DOCKER_TOKEN }} && docker push dishachaudhari/DOCKER-repo:latest
+      run: docker login -u  dishachaudhari -p $ {{ secrets.DOCKER_TOKEN }} && docker push dishachaudhari/docker-repo:latest
